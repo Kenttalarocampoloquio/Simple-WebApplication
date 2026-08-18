@@ -16,8 +16,8 @@
         }
         header {
             padding: 20px 40px;
-            background: #fff;
-            border-bottom: 1px solid #e5e5e5;
+            background: #0a0a0a;
+            border-bottom: 1px solid #1a1a1a;
             display: flex;
             justify-content: space-between;
             align-items: center;
