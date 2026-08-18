@@ -16,28 +16,144 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ang aking Student Profile</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background: #f5f5f5;
+            color: #111;
+            min-height: 100vh;
+        }
+        header {
+            padding: 20px 40px;
+            background: #fff;
+            border-bottom: 1px solid #e5e5e5;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo { font-weight: 800; font-size: 1.2rem; }
+        .logo span { color: #ff6b35; }
+        header a {
+            color: #666;
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+        header a:hover { color: #ff6b35; }
+        main {
+            max-width: 640px;
+            margin: 48px auto;
+            padding: 0 20px;
+        }
+        .name-block { margin-bottom: 32px; }
+        .name-block h1 { font-size: 1.8rem; font-weight: 800; }
+        .name-block p { color: #666; margin-top: 4px; font-size: 0.95rem; }
+        .id-tag {
+            display: inline-block;
+            margin-top: 8px;
+            background: #fff;
+            border: 1px solid #e5e5e5;
+            border-radius: 4px;
+            padding: 3px 10px;
+            font-size: 0.8rem;
+            color: #ff6b35;
+            font-weight: 600;
+        }
+        .section-label {
+            font-size: 0.72rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #aaa;
+            margin-bottom: 12px;
+            margin-top: 28px;
+        }
+        .info-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+        .info-item {
+            background: #fff;
+            border: 1px solid #e5e5e5;
+            border-radius: 8px;
+            padding: 14px 18px;
+        }
+        .info-item.full { grid-column: 1 / -1; }
+        .info-label {
+            font-size: 0.72rem;
+            color: #aaa;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 4px;
+        }
+        .info-value { font-size: 0.95rem; font-weight: 600; color: #111; }
+        .social-links { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 12px; }
+        .social-links a {
+            background: #fff;
+            border: 1px solid #e5e5e5;
+            color: #111;
+            padding: 8px 18px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-size: 0.88rem;
+            font-weight: 600;
+        }
+        .social-links a:hover {
+            border-color: #ff6b35;
+            color: #ff6b35;
+        }
+        .back {
+            display: inline-block;
+            margin-top: 36px;
+            color: #666;
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+        .back:hover { color: #ff6b35; }
+    </style>
 </head>
 <body>
-    <h1>Student Information</h1>
-    <p>Student ID: <?= $student_id ?></p>
-    <p>Name: <?= $name ?></p>
-    <p>Course: <?= $course ?></p>
-    <p>Year Level: <?= $year ?></p>
-    <p>Section: <?= $section ?></p>
-    <p>Email: <?= $email ?></p>
-    <p>Address: <?= $address ?></p>
-    <p>Contact Number: <?= $contact_number ?></p>
-    <p>Hobbies: <?= $hobbies ?></p>
+    <header>
+        <div class="logo">Lava<span>Lust</span></div>
+        <a href="<?= site_url('student') ?>">← Back to Home</a>
+    </header>
+    <main>
+        <div class="name-block">
+            <h1><?= $name ?></h1>
+            <p><?= $course ?> — <?= $year ?>, Section <?= $section ?></p>
+            <span class="id-tag"><?= $student_id ?></span>
+        </div>
 
-    <p>Social Media:</p>
-    <ul>
-        <?php foreach ($social_media as $platform => $link): ?>
-            <li><?= ucfirst($platform) ?>: <a href="<?= $link ?>" target="_blank"><?= $link ?></a></li>
-        <?php endforeach; ?>
-    </ul>
-    <nav>
-        <a href="<?= site_url('student') ?>">Home</a>
-    </nav>
+        <div class="section-label">Personal Information</div>
+        <div class="info-grid">
+            <div class="info-item">
+                <div class="info-label">Email</div>
+                <div class="info-value"><?= $email ?></div>
+            </div>
+            <div class="info-item">
+                <div class="info-label">Contact Number</div>
+                <div class="info-value"><?= $contact_number ?></div>
+            </div>
+            <div class="info-item full">
+                <div class="info-label">Address</div>
+                <div class="info-value"><?= $address ?></div>
+            </div>
+            <div class="info-item full">
+                <div class="info-label">Hobbies</div>
+                <div class="info-value"><?= $hobbies ?></div>
+            </div>
+        </div>
+
+        <div class="section-label">Social Media</div>
+        <div class="social-links">
+            <?php foreach ($social_media as $platform => $link): ?>
+                <a href="<?= $link ?>" target="_blank"><?= ucfirst($platform) ?></a>
+            <?php endforeach; ?>
+        </div>
+
+        <a href="<?= site_url('student') ?>" class="back">← Back to Home</a>
+    </main>
 </body>
 </html>
