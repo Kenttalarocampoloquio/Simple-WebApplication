@@ -61,7 +61,7 @@
 </head>
 <body>
     <header>
-        <div class="logo">Lava<span>Lust</span></div>
+        <div class="logo">Student<span>Home</span></div>
     </header>
     <main>
         <h1>Mabuhay Mahaltana!<br>Welcome sa aking student page.</h1>
