@@ -8,7 +8,7 @@
  * @var string $email
  * @var string $address
  * @var string $contact_number
- * @var string $hobbies
+ * @var string $hobbies 
  * @var array  $social_media
  */
 ?>
