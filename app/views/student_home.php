@@ -41,7 +41,7 @@
             line-height: 1.2;
         }
         p {
-            color: #666;
+            color: #888;
             font-size: 1rem;
             line-height: 1.6;
             margin-bottom: 32px;
@@ -61,7 +61,7 @@
 </head>
 <body>
     <header>
-        <div class="logo">Student<span>Profile</span></div>
+        <div class="logo">Lava<span>Lust</span></div>
     </header>
     <main>
         <h1>Mabuhay Mahaltana!<br>Welcome sa aking student page.</h1>
