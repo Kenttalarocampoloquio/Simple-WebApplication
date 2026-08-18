@@ -116,7 +116,7 @@
 </head>
 <body>
     <header>
-        <div class="logo">Lava<span>Lust</span></div>
+        <div class="logo">Student<span>Profile</span></div>
         <a href="<?= site_url('student') ?>">← Back to Home</a>
     </header>
     <main>
