@@ -28,8 +28,8 @@
         }
         header {
             padding: 20px 40px;
-            background: #fff;
-            border-bottom: 1px solid #e5e5e5;
+            background: #0a0a0a;
+            border-bottom: 1px solid #1a1a1a;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -49,12 +49,12 @@
         }
         .name-block { margin-bottom: 32px; }
         .name-block h1 { font-size: 1.8rem; font-weight: 800; }
-        .name-block p { color: #666; margin-top: 4px; font-size: 0.95rem; }
+        .name-block p { color: #888; margin-top: 4px; font-size: 0.95rem; }
         .id-tag {
             display: inline-block;
             margin-top: 8px;
-            background: #fff;
-            border: 1px solid #e5e5e5;
+            background: #111;
+            border: 1px solid #1a1a1a;
             border-radius: 4px;
             padding: 3px 10px;
             font-size: 0.8rem;
@@ -65,7 +65,7 @@
             font-size: 0.72rem;
             text-transform: uppercase;
             letter-spacing: 1px;
-            color: #aaa;
+            color: #555;
             margin-bottom: 12px;
             margin-top: 28px;
         }
@@ -75,25 +75,25 @@
             gap: 10px;
         }
         .info-item {
-            background: #fff;
-            border: 1px solid #e5e5e5;
+            background: #111;
+            border: 1px solid #1a1a1a;
             border-radius: 8px;
             padding: 14px 18px;
         }
         .info-item.full { grid-column: 1 / -1; }
         .info-label {
             font-size: 0.72rem;
-            color: #aaa;
+            color: #555;
             text-transform: uppercase;
             letter-spacing: 0.5px;
             margin-bottom: 4px;
         }
-        .info-value { font-size: 0.95rem; font-weight: 600; color: #111; }
+        .info-value { font-size: 0.95rem; font-weight: 600; color: #fff; }
         .social-links { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 12px; }
         .social-links a {
-            background: #fff;
-            border: 1px solid #e5e5e5;
-            color: #111;
+            background: #111;
+            border: 1px solid #1a1a1a;
+            color: #fff;
             padding: 8px 18px;
             border-radius: 6px;
             text-decoration: none;
@@ -116,7 +116,8 @@
 </head>
 <body>
     <header>
-        <div class="logo">Student<span>Profile</span></div>
+        <div class="logo">Lava<span>Lust</span></div>
+        <a href="<?= site_url('student') ?>">← Back to Home</a>
     </header>
     <main>
         <div class="name-block">
