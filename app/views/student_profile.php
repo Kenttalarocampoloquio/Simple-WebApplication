@@ -22,8 +22,8 @@
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
             font-family: 'Segoe UI', sans-serif;
-            background: #f5f5f5;
-            color: #111;
+            background: #0a0a0a;
+            color: #fff;
             min-height: 100vh;
         }
         header {
