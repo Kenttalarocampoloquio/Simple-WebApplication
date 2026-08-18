@@ -117,7 +117,6 @@
 <body>
     <header>
         <div class="logo">Student<span>&nbsp;Profile</span></div>
-        <a href="<?= site_url('student') ?>">← Back to Home</a>
     </header>
     <main>
         <div class="name-block">
